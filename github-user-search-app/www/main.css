@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+.search-bar {
+  background-color: #FEFEFE;
+  width: 100%;
+  max-width: 730px;
+  border-radius: 15px;
+  height: 70px;
+  display: flex;
+  box-sizing: border-box;
+  margin-bottom: 24px;
+  padding: 0px 10px 0px 32px;
+  align-items: center;
+}
+.search-bar .search-bar__input {
+  border: none;
+  margin-left: 10px;
+  flex-grow: 1;
+  font-size: 18px;
+  color: #2B3442;
+  font-weight: normal;
+  caret-color: #0079FF;
+}
+.search-bar .search-bar__input:focus {
+  outline: none;
+}
+.search-bar button {
+  width: 106px;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+  background-color: #0079FF;
+  color: #FEFEFE;
+  font-weight: bold;
+  font-size: 16px;
+  margin-left: auto;
+  cursor: pointer;
+}
+.search-bar button:hover {
+  background-color: rgba(0, 121, 255, 0.5);
+}
+
+.card {
+  background-color: #FEFEFE;
+  width: 100%;
+  max-width: 730px;
+  border-radius: 15px;
+  box-sizing: border-box;
+  padding: 32px;
+  display: flex;
+  flex-direction: row;
+}
+.card .disabled {
+  color: rgba(75, 106, 155, 0.5);
+}
+.card .disabled img {
+  opacity: 0.5;
+}
+.card .user {
+  font-weight: bold;
+  font-size: 26px;
+}
+.card .username {
+  color: #0079FF;
+}
+.card .joined {
+  color: #697C9A;
+}
+.card .bio {
+  color: #697C9A;
+  margin: 10px 0px 10px 0px;
+}
+.card a {
+  color: #4B6A9B;
+  text-decoration: none;
+}
+.card a:hover {
+  text-decoration: underline;
+}
+.card .stats {
+  padding: 10px 32px 10px 32px;
+  margin: 20px 0px 20px 0px;
+  box-sizing: border-box;
+  background-color: #F6F8FF;
+  border-radius: 15px;
+}
+.card .stats table {
+  color: grey;
+  width: 100%;
+}
+.card .stats table th {
+  text-align: left;
+  font-size: 13px;
+  font-weight: normal;
+}
+.card .stats table tr {
+  font-weight: bold;
+  font-size: 22px;
+  color: #2B3442;
+}
+.card .info-table {
+  color: #697C9A;
+}
+.card .info-table img {
+  height: 20px;
+  margin-right: 16px;
+}
+.card .info-table table {
+  width: 100%;
+  border-spacing: 10px;
+}
+.card .info {
+  flex-grow: 1;
+}
+.card .info-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.card .image {
+  margin-right: 32px;
+}
+.card .image img {
+  height: 117px;
+  width: 117px;
+  border-radius: 50%;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 26px;
+  width: 100%;
+  max-width: 730px;
+  margin-bottom: 24px;
+}
+
+button.mode {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  font-size: 13px;
+  font-weight: bold;
+  color: #697C9A;
+  cursor: pointer;
+}
+button.mode img {
+  margin-left: 10px;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  font-size: 15px;
+  background-color: #F6F8FF;
+  padding: 20px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*# sourceMappingURL=main.css.map */
