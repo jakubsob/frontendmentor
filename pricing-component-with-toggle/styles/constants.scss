@@ -1,0 +1,16 @@
+$purple: #6D72DE;
+$purple-grey: #F7F7FE;
+$purple-light: #A2A7F0;
+$grey: #4A4D60;
+$grey-light: #6E728E;
+$white: #FFFFFF;
+$purple-background: linear-gradient(90deg, $purple-light, $purple);
+
+$border-radius: 10px;
+$border-radius-small: 6px;
+
+$card-height: 400px;
+$card-width: 350px;
+
+$mobile-max-width: calc(3 * $card-width);
+
