@@ -7,8 +7,11 @@
 body {
   font-family: "Montserrat";
   font-size: 15px;
-background-color: $purple-grey;
-  background-image: url("images/bg-bottom.svg");
+  background-color: $purple-grey;
+  background-image: url("images/bg-bottom.svg"), url("images/bg-top.svg");
+  background-position: left bottom, right top;
+  background-repeat: no-repeat, no-repeat;
+  height: 100vh;
 }
 
 .content {
@@ -22,4 +25,13 @@ background-color: $purple-grey;
   justify-content: center;
   align-items: center;
   gap: 0px;
+}
+
+@media (max-width: $mobile-max-width) {
+  .grid-container {
+    grid-template-areas:
+      "basic"
+      "professional"
+      "master";
+  }
 }

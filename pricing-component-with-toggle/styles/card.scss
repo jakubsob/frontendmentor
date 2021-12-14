@@ -1,6 +1,7 @@
 .card {
   color: $grey-light;
-  width: 350px;
+  width: $card-width;
+  height: $card-height;
   border-radius: $border-radius;
   background-color: $white;
   display: flex;
@@ -8,7 +9,7 @@
   align-items: center;
   box-sizing: border-box;
   padding: 20px;
-  height: 450px;
+  margin: 20px 0px 20px 0px;
 
   &.basic {
     grid-area: "basic";
@@ -24,6 +25,15 @@
   
   &.professional {
     grid-area: "professional";
+    height: calc($card-height + 40px);
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    &.professional {
+      height: $card-height;
+    }
   }
 
   &.primary {
@@ -70,7 +80,7 @@
     width: 100%;
     text-align: center;
     margin: 20px 0px 32px 0px;
-    font-weight: 400;
+    font-weight: 500;
     color: $grey;
 
     .card__details_element {

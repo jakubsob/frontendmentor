@@ -8,3 +8,9 @@ $purple-background: linear-gradient(90deg, $purple-light, $purple);
 
 $border-radius: 10px;
 $border-radius-small: 6px;
+
+$card-height: 400px;
+$card-width: 350px;
+
+$mobile-max-width: calc(3 * $card-width);
+

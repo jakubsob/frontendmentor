@@ -2,6 +2,7 @@
 .card {
   color: #6E728E;
   width: 350px;
+  height: 400px;
   border-radius: 10px;
   background-color: #FFFFFF;
   display: flex;
@@ -9,7 +10,7 @@
   align-items: center;
   box-sizing: border-box;
   padding: 20px;
-  height: 450px;
+  margin: 20px 0px 20px 0px;
 }
 .card.basic {
   grid-area: "basic";
@@ -23,6 +24,14 @@
 }
 .card.professional {
   grid-area: "professional";
+  height: 440px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+@media (max-width: 1050px) {
+  .card.professional {
+    height: 400px;
+  }
 }
 .card.primary {
   color: #FFFFFF;
@@ -61,7 +70,7 @@
   width: 100%;
   text-align: center;
   margin: 20px 0px 32px 0px;
-  font-weight: 400;
+  font-weight: 500;
   color: #4A4D60;
 }
 .card .card__details .card__details_element {
@@ -119,6 +128,8 @@
   flex-direction: row;
   align-items: center;
   margin: 32px 0px 32px 0px;
+  font-weight: 500;
+  color: rgba(110, 114, 142, 0.5);
 }
 
 .toggle {
@@ -138,11 +149,11 @@
 .toggle:after {
   content: "";
   position: absolute;
-  width: 27px;
-  height: 27px;
+  width: 26px;
+  height: 26px;
   border-radius: 50%;
   background-color: gray;
-  top: 2px;
+  top: 3px;
   left: 3px;
   transition: all 0.2s;
   background-color: #FFFFFF;
@@ -153,7 +164,7 @@
 
 /* Checkbox checked effect */
 .checkbox:checked + .toggle::after {
-  left: 22px;
+  left: 27px;
 }
 
 /* Checkbox vanished */
@@ -165,7 +176,10 @@ body {
   font-family: "Montserrat";
   font-size: 15px;
   background-color: #F7F7FE;
-  background-image: url("images/bg-bottom.svg");
+  background-image: url("images/bg-bottom.svg"), url("images/bg-top.svg");
+  background-position: left bottom, right top;
+  background-repeat: no-repeat, no-repeat;
+  height: 100vh;
 }
 
 .content {
@@ -179,6 +193,12 @@ body {
   justify-content: center;
   align-items: center;
   gap: 0px;
+}
+
+@media (max-width: 1050px) {
+  .grid-container {
+    grid-template-areas: "basic" "professional" "master";
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
