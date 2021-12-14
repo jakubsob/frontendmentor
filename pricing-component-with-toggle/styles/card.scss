@@ -1,0 +1,117 @@
+.card {
+  color: $grey-light;
+  width: 350px;
+  border-radius: $border-radius;
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 20px;
+  height: 450px;
+
+  &.basic {
+    grid-area: "basic";
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+
+  &.master {
+    grid-area: "master";
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+  }
+  
+  &.professional {
+    grid-area: "professional";
+  }
+
+  &.primary {
+    color: $white;
+    background: $purple-background;
+
+    .card__price {
+      color: $white;
+    }
+
+    .card__details {
+      color: $white;
+      .card__details_element {
+        border-color: rgba($white, 0.5);
+      }
+    }
+  }
+
+  .card__title {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+
+  .card__price {
+    color: $grey;
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .card__price_value {
+      font-size: 72px;
+    }
+
+    .card__price_currency {
+      font-size: 40px;
+    }
+  }
+
+  .card__details {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    margin: 20px 0px 32px 0px;
+    font-weight: 400;
+    color: $grey;
+
+    .card__details_element {
+      padding: 10px 0px 10px 0px;
+      border-width: 1px;
+      border-color: rgba($grey-light, 0.2);
+      border-top-style: solid;
+
+      &:last-child {
+        border-bottom-style: solid;
+      }
+    }
+  }
+
+  button {
+    width: 100%;
+    border: none;
+    color: $white;
+    text-transform: uppercase;
+    height: 44px;
+    cursor: pointer;
+    border-radius: $border-radius-small;
+    margin-top: auto;
+
+    &.primary {
+      background: $purple-background;
+      &:hover {
+        color: $purple;
+        border: 1px solid $purple;
+        background: transparent;
+      }
+    }
+
+    &.secondary {
+      background-color: $white;
+      color: $purple;
+      &:hover {
+        color: $white;
+        border: 1px solid $white;
+        background: transparent;
+      }
+    }
+  }
+}
