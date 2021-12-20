@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 26px;
+  width: 100%;
+  max-width: $width-desktop;
+  margin-bottom: 24px;
+}
+
+button.mode {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  font-size: 13px;
+  font-weight: bold;
+  color: $grey;
+  cursor: pointer;
+
+  img {
+    margin-left: 10px;
+  }
+}
