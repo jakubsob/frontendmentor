@@ -1,0 +1,63 @@
+.user-info {
+  grid-area: user-grid-info;
+
+  .user-info-grid-container {
+    display: grid;
+    grid-template-areas:
+      "user-info-grid-image user-info-grid-user"
+      ". user-info-grid-joined"
+      "user-info-grid-bio user-info-grid-bio";
+    grid-template-columns: $image-size 1fr;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    .user-info-grid-container {
+      grid-template-areas:
+        "user-info-grid-image user-info-grid-user user-info-grid-joined"
+        ". user-info-grid-bio user-info-grid-bio";
+      grid-template-columns: $image-size 1fr 1fr;
+    }
+  }
+
+  .image {
+    grid-area: user-info-grid-image;
+    margin-right: 32px;
+    img {
+      max-height: $image-size;
+      max-width: $image-size;
+      border-radius: 50%;
+    }
+  }
+
+  .username-full {
+    grid-area: user-info-grid-user;
+    font-weight: bold;
+    font-size: 26px;
+    text-align: left;
+  }
+
+  .username-at {
+    grid-area: user-info-grid-user;
+    color: $blue;
+    text-align: left;
+  }
+
+  .joined {
+    grid-area: user-info-grid-joined;
+    color: $grey;
+    text-align: left;
+  }
+
+  @media (min-width: $min-width-desktop) {
+    .joined {
+      text-align: right;
+    }
+  }
+
+  .bio {
+    grid-area: user-info-grid-bio;
+    color: $grey;
+    margin: 10px 0px 10px 0px;
+    text-align: left;
+  }
+}

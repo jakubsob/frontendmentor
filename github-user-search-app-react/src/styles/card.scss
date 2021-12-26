@@ -1,7 +1,8 @@
 .card {
   background-color: $white;
   width: 100%;
-  max-width: $width-desktop;
+  max-width: $card-max-width;
+  min-width: $card-min-width;
   border-radius: $border-radius;
   box-sizing: border-box;
   padding: 32px;
@@ -15,22 +16,24 @@
     }
   }
 
-  .user {
-    font-weight: bold;
-    font-size: 26px;
+  .card-grid-container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "user-grid-info"
+      "user-grid-stats"
+      "user-grid-contact";
   }
 
-  .username {
-    color: $blue;
-  }
-
-  .joined {
-    color: $grey;
-  }
-
-  .bio {
-    color: $grey;
-    margin: 10px 0px 10px 0px;
+  @media (min-width: $min-width-desktop) {
+    .card-grid-container {
+      grid-template-columns: $image-size 1fr;
+      grid-template-areas:
+        "user-grid-info user-grid-info"
+        ". user-grid-stats"
+        ". user-grid-contact";
+    }
   }
 
   a {
@@ -39,45 +42,6 @@
     &:hover {
       text-decoration: underline;
     }
-  }
-
-  .stats {
-    padding: 10px 32px 10px 32px;
-    margin: 20px 0px 20px 0px;
-    box-sizing: border-box;
-    background-color: $light-grey;
-    border-radius: $border-radius;
-    
-    table {
-      color: grey;
-      width: 100%;
-  
-      th {
-        text-align: left;
-        font-size: 13px;
-        font-weight: normal;
-      }
-  
-      tr {
-        font-weight: bold;
-        font-size: 22px;
-        color: $dark-grey;
-      }
-    }
-  }
-
-  .info-table {
-    color: $grey;
-
-    img {
-      height: 20px;
-      margin-right: 16px;
-    }
-
-    table {
-      width: 100%;
-      border-spacing: 10px;
-    } 
   }
 
   .info {
@@ -89,14 +53,5 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: baseline;
-  }
-
-  .image {
-    margin-right: 32px;
-    img {
-      height: 117px;
-      width: 117px;
-      border-radius: 50%;
-    }
   }
 }

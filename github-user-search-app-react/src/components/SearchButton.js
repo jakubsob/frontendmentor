@@ -1,15 +1,12 @@
-import React, { Component } from 'react';
+import React from "react";
 
-class SearchButton extends Component {
-  handleClick = () => {
-    alert("Search");
-  };
-
-  render() {
-    return (
-      <button onClick={this.handleClick}>Search</button>
-    );
+function SearchButton(props) {
+  function handleClick(event) {
+    event.preventDefault();
+    props.handleSubmit();
   }
+
+  return <button onClick={handleClick}>Search</button>;
 }
 
 export default SearchButton;

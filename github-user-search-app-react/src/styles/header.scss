@@ -5,7 +5,8 @@
   font-weight: 600;
   font-size: 26px;
   width: 100%;
-  max-width: $width-desktop;
+  max-width: $card-max-width;
+  min-width: $card-min-width;
   margin-bottom: 24px;
 }
 
