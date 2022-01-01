@@ -6,10 +6,12 @@ const modes = {
   dark: {
     text: "dark",
     icon: iconMoon,
+    theme: "theme-dark",
   },
   light: {
     text: "light",
     icon: iconSun,
+    theme: "theme-light",
   },
 };
 const startMode = "dark";

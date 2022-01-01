@@ -8,6 +8,7 @@
   max-width: $card-max-width;
   min-width: $card-min-width;
   margin-bottom: 24px;
+  color: var(--header-color);
 }
 
 button.mode {
@@ -17,7 +18,7 @@ button.mode {
   border: none;
   font-size: 13px;
   font-weight: bold;
-  color: $grey;
+  color: var(--font-light-color);
   cursor: pointer;
 
   img {

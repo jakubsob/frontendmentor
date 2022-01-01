@@ -34,17 +34,18 @@
     font-weight: bold;
     font-size: 26px;
     text-align: left;
+    color: var(--header-color);
   }
 
   .username-at {
     grid-area: user-info-grid-user;
-    color: $blue;
+    color: var(--primary-color);
     text-align: left;
   }
 
   .joined {
     grid-area: user-info-grid-joined;
-    color: $grey;
+    color: var(--font-grey-color);
     text-align: left;
   }
 
@@ -56,7 +57,7 @@
 
   .bio {
     grid-area: user-info-grid-bio;
-    color: $grey;
+    color: var(--font-light-color);
     margin: 10px 0px 10px 0px;
     text-align: left;
   }

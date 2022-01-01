@@ -1,5 +1,5 @@
 .card {
-  background-color: $white;
+  background-color: var(--primary-background-color);
   width: 100%;
   max-width: $card-max-width;
   min-width: $card-min-width;
@@ -10,7 +10,7 @@
   flex-direction: row;
 
   .disabled {
-    color: rgba($blue-grey, 0.5);
+    color: rgba(var(--blue-gray), 0.5);
     img {
       opacity: 0.5;
     }
@@ -37,7 +37,7 @@
   }
 
   a {
-    color: $blue-grey;
+    color: var(--blue-gray);
     text-decoration: none;
     &:hover {
       text-decoration: underline;

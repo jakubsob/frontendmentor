@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-area: user-grid-contact;
-  color: $grey;
+  color: var(--font-light-color);
 
   .user-contact-item {
     text-align: left;

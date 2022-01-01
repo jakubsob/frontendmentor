@@ -1,5 +1,5 @@
 .search-bar {
-  background-color: $white;
+  background-color: var(--primary-background-color);
   width: 100%;
   max-width: $card-max-width;
   min-width: $card-min-width;
@@ -17,9 +17,10 @@
     margin-left: 10px;
     flex-grow: 1;
     font-size: 18px;
-    color: $dark-grey;
+    background-color: var(--primary-background-color);
+    color: var(--font-dark-color);
     font-weight: normal;
-    caret-color: $blue;
+    caret-color: var(--primary-color);
     &:focus {
       outline: none;
     }
@@ -30,14 +31,14 @@
     height: 50px;
     border: none;
     border-radius: 10px;
-    background-color: $blue;
-    color: $white;
+    background-color: var(--primary-color);
+    color: var(--button-color);
     font-weight: bold;
     font-size: 16px;
     margin-left: auto;
     cursor: pointer;
     &:hover {
-      background-color: rgba($blue, 0.5);
+      background-color: var(--button-hover-background-color);
     }
   }
 }
