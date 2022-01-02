@@ -1,0 +1,27 @@
+.stats {
+  grid-area: user-grid-stats;
+  padding: 10px 32px 10px 32px;
+  margin: 20px;
+  box-sizing: border-box;
+  background-color: var(--secondary-background-color);
+  border-radius: $border-radius;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .user-stats-item {
+    width: 100%;
+    text-align: left;
+    .user-stats-name {
+      color: var(--font-light-color);
+      font-size: 13px;
+      font-weight: normal;
+    }
+
+    .user-stats-value {
+      font-weight: bold;
+      font-size: 22px;
+      color: var(--font-dark-color);
+    }
+  }
+}

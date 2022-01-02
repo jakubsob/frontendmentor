@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import "constants";
+@import "search-bar";
+@import "card";
+@import "header";
+@import "user-info";
+@import "user-contact";
+@import "user-stats";
+
+.theme-light {
+  --primary-background-color: #fefefe;
+  --secondary-background-color: #f6f8ff;
+
+  --primary-color: #0079ff;
+
+  --font-light-color: #4b6a9b;
+  --font-grey-color: #697c9a;
+  --font-dark-color: #2b3442;
+
+  --header-color: #141d2f;
+
+  --button-color: #ffffff;
+  --button-hover-background-color: #60abff;
+}
+.theme-dark {
+  --primary-background-color: #1e2a47;
+  --secondary-background-color: #141d2f;
+
+  --primary-color: #0079ff;
+
+  --font-light-color: #ffffff;
+  --font-grey-color: #ffffff;
+  --font-dark-color: #ffffff;
+
+  --header-color: #ffffff;
+
+  --button-color: #ffffff;
+  --button-hover-background-color: #60abff;
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  font-family: "Space Mono", monospace;
+  font-size: 15px;
+  background-color: var(--secondary-background-color);
+  padding: 20px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

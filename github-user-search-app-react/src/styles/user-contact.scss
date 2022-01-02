@@ -1,0 +1,26 @@
+.contact-table-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-area: user-grid-contact;
+  color: var(--font-light-color);
+
+  .user-contact-item {
+    text-align: left;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    .item-icon {
+      margin-right: 20px;
+      img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
+
+@media (min-width: $min-width-tablet) {
+  .contact-table-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
