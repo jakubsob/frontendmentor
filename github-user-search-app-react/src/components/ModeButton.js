@@ -1,11 +1,10 @@
 import React from "react";
 
 function SearchButton(props) {
-  const { text, icon } = props.theme;
   return (
     <button onClick={props.onClick} className="mode">
-      {text.toUpperCase()}
-      <img src={icon}></img>
+      {props.theme.text.toUpperCase()}
+      <img src={props.theme.icon}></img>
     </button>
   );
 }

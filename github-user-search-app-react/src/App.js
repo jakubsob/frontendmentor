@@ -4,33 +4,22 @@ import SearchBar from "./components/SearchBar";
 import InfoCard from "./components/InfoCard";
 import { useState } from "react";
 import User from "./js/githubApi";
-import iconMoon from "./assets/icon-moon.svg";
-import iconSun from "./assets/icon-sun.svg";
+import ThemeManager from "./js/ThemeManager";
 
-const modes = {
-  dark: {
-    text: "dark",
-    icon: iconMoon,
-    className: "theme-light",
-  },
-  light: {
-    text: "light",
-    icon: iconSun,
-    className: "theme-dark",
-  },
-};
+const START_MODE = "light";
+const START_USER = "octocat";
+const THEME_MANAGER = new ThemeManager(START_MODE);
 
 function App() {
-  const [user, setUser] = useState(new User("octocat"));
-  const [theme, setTheme] = useState(modes["dark"]);
+  const [user, setUser] = useState(new User(START_USER));
+  const [theme, setTheme] = useState(THEME_MANAGER.getCurrent());
 
   function handleSubmit(query) {
     setUser(new User(query));
   }
 
   function handleThemeChange() {
-    const newTheme = theme.text == "light" ? modes["dark"] : modes["light"];
-    setTheme(newTheme);
+    setTheme(THEME_MANAGER.toggle());
   }
 
   return (
